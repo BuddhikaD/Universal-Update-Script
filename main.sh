@@ -39,3 +39,11 @@ then
     ## Run the RHEL/CentOS/Red Hat/Fedora version of the update comand
     sudo yum check-update && sudo yum update -y 
 fi
+
+## Test if the local host is openSUSE based Linux
+
+if [ -d /etc/zypp ]
+then
+    ## Run the openSUSE version of the update command
+    sudo zypper update && sudo zypper dist-upgrade
+fi
