@@ -23,3 +23,11 @@ then
     ## Run the Arch version of the update command
     sudo pacman -Syu
 fi
+
+## Test if the local host is Debian based
+
+if [ -d /etc/apt ]
+then
+    ## Run the debian version of the update comand
+    sudo apt-get update && sudo apt-get dist-upgrade
+fi
